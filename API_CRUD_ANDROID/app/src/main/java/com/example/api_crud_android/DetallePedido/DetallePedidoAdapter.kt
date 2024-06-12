@@ -17,7 +17,7 @@ class DetallePedidoAdapter(
 ) : ArrayAdapter<DetallePedido>(context, R.layout.item_detallepedido, dataSource) {
 
     private class ViewHolder {
-        lateinit var idDetallePedido: TextView
+        //lateinit var idDetallePedido: TextView
         lateinit var cantidad: TextView
         lateinit var precioUnitario: TextView
         lateinit var botonEliminar: ImageButton
@@ -31,7 +31,7 @@ class DetallePedidoAdapter(
         if (convertView == null) {
             view = LayoutInflater.from(context).inflate(R.layout.item_detallepedido, parent, false)
             holder = ViewHolder()
-            holder.idDetallePedido = view.findViewById(R.id.textViewIdDetallePedidoo)
+            //holder.idDetallePedido = view.findViewById(R.id.textViewIdDetallePedidoo)
             holder.cantidad = view.findViewById(R.id.textViewCantidadd)
             holder.precioUnitario = view.findViewById(R.id.textViewPrecioUnitarioo)
             holder.botonEliminar = view.findViewById(R.id.btnEliminar)
@@ -47,7 +47,7 @@ class DetallePedidoAdapter(
         val detallePedido = dataSource[position]
 
         // Asignar valores a los TextView
-        holder.idDetallePedido.text = detallePedido.idDetallePedido.toString()
+        //holder.idDetallePedido.text = detallePedido.idDetallePedido.toString()
         holder.cantidad.text = detallePedido.cantidad.toString()
         holder.precioUnitario.text = detallePedido.precioUnitario.toString()
 

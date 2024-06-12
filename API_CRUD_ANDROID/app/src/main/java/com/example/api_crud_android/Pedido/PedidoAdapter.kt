@@ -17,7 +17,7 @@ class PedidoAdapter(
 ) : ArrayAdapter<Pedido>(context, R.layout.item_pedido, dataSource) {
 
     private class ViewHolder {
-        lateinit var idPedido: TextView
+        //lateinit var idPedido: TextView
         lateinit var fecha: TextView
         lateinit var direccion: TextView
         lateinit var botonEliminar: ImageButton
@@ -31,7 +31,7 @@ class PedidoAdapter(
         if (convertView == null) {
             view = LayoutInflater.from(context).inflate(R.layout.item_pedido, parent, false)
             holder = ViewHolder()
-            holder.idPedido = view.findViewById(R.id.textViewIdPedido)
+            //holder.idPedido = view.findViewById(R.id.textViewIdPedido)
             holder.fecha = view.findViewById(R.id.textViewFechaPedido)
             holder.direccion = view.findViewById(R.id.textViewDireccion)
             holder.botonEliminar = view.findViewById(R.id.btnEliminar)
@@ -46,7 +46,7 @@ class PedidoAdapter(
         val pedido = dataSource[position]
 
         // Asignar valores a los TextView
-        holder.idPedido.text = pedido.idPedido.toString()
+        //holder.idPedido.text = pedido.idPedido.toString()
         holder.fecha.text = pedido.fecha
         holder.direccion.text = pedido.direccion
 

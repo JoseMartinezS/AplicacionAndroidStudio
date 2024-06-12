@@ -46,6 +46,8 @@ class InsertarDetallePedido : AppCompatActivity() {
     }
 
     private fun insertarNuevoDetallePedido(cantidad: Int, precioUnitario: Double) {
+        buttonInsertar.isEnabled = false
+
         apiService.agregarDetallePedido(cantidad, precioUnitario).enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if (response.isSuccessful) {
@@ -53,11 +55,15 @@ class InsertarDetallePedido : AppCompatActivity() {
                 } else {
                     val errorBody = response.errorBody()?.string()
                     mostrarMensaje("Error al agregar detalle pedido: ${response.code()} - ${errorBody}")
+                    buttonInsertar.isEnabled = true
+
                 }
             }
 
             override fun onFailure(call: Call<Void>, t: Throwable) {
                 mostrarMensaje("Error al agregar detalle pedido: ${t.message}")
+                buttonInsertar.isEnabled = true
+
             }
         })
     }

@@ -41,6 +41,7 @@ class InsertarCategoria : AppCompatActivity() {
     }
 
     private fun insertarNuevaCategoria(nombre: String) {
+        buttonInsertar.isEnabled = false
         apiService.agregarCategoria(nombre)
             .enqueue(object : Callback<Void> {
                 override fun onResponse(call: Call<Void>, response: Response<Void>) {
@@ -49,11 +50,13 @@ class InsertarCategoria : AppCompatActivity() {
                     } else {
                         val errorBody = response.errorBody()?.string()
                         mostrarMensaje("Error al agregar categoría: ${response.code()} - ${errorBody}")
+                        buttonInsertar.isEnabled = true
                     }
                 }
 
                 override fun onFailure(call: Call<Void>, t: Throwable) {
                     mostrarMensaje("Error al agregar categoría: ${t.message}")
+                    buttonInsertar.isEnabled = true
                 }
             })
     }

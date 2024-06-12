@@ -34,12 +34,11 @@ class InsertarUsuario : AppCompatActivity() {
         buttonRegresar = findViewById(R.id.buttonRegresar)
 
         buttonInsertar.setOnClickListener {
-            val nombreUsuario = editTextNombre.text.toString()
-            val contrasena = editTextContrasena.text.toString()
-            val correo = editTextCorreo.text.toString()
-            val rol = editTextRol.text.toString()
-
-            if (nombreUsuario.isNotEmpty() && contrasena.isNotEmpty() && correo.isNotEmpty() && rol.isNotEmpty()) {
+            if (verificarCamposVacios()) {
+                val nombreUsuario = editTextNombre.text.toString()
+                val contrasena = editTextContrasena.text.toString()
+                val correo = editTextCorreo.text.toString()
+                val rol = editTextRol.text.toString()
                 insertarNuevoUsuario(nombreUsuario, contrasena, correo, rol)
             } else {
                 mostrarMensaje("Por favor completa todos los campos")
@@ -60,6 +59,12 @@ class InsertarUsuario : AppCompatActivity() {
                 override fun onResponse(call: Call<Void>, response: Response<Void>) {
                     if (response.isSuccessful) {
                         mostrarMensaje("Usuario agregado exitosamente")
+                        //limpiarCampos()
+                        // No reactivar el botón en caso de éxito
+                    } else if (response.code() == 409) {
+                        mostrarMensaje("El correo ya está en uso")
+                        // Reactivar el botón de insertar en caso de error
+                        buttonInsertar.isEnabled = true
                     } else {
                         val errorBody = response.errorBody()?.string()
                         mostrarMensaje("Error al agregar usuario: ${response.code()} - ${errorBody}")
@@ -74,6 +79,20 @@ class InsertarUsuario : AppCompatActivity() {
                     buttonInsertar.isEnabled = true
                 }
             })
+    }
+
+    private fun limpiarCampos() {
+        editTextNombre.text.clear()
+        editTextContrasena.text.clear()
+        editTextCorreo.text.clear()
+        editTextRol.text.clear()
+    }
+
+    private fun verificarCamposVacios(): Boolean {
+        return editTextNombre.text.isNotEmpty() &&
+                editTextContrasena.text.isNotEmpty() &&
+                editTextCorreo.text.isNotEmpty() &&
+                editTextRol.text.isNotEmpty()
     }
 
     private fun mostrarMensaje(mensaje: String) {

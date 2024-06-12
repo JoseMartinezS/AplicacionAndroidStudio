@@ -17,7 +17,7 @@ class ClienteAdapter(
 ) : ArrayAdapter<Cliente>(context, R.layout.item_cliente, dataSource) {
 
     private class ViewHolder {
-        lateinit var idCliente: TextView
+        //lateinit var idCliente: TextView
         lateinit var nombre: TextView
         lateinit var apellido: TextView
         lateinit var direccion: TextView
@@ -32,7 +32,7 @@ class ClienteAdapter(
         if (convertView == null) {
             view = LayoutInflater.from(context).inflate(R.layout.item_cliente, parent, false)
             holder = ViewHolder()
-            holder.idCliente = view.findViewById(R.id.textViewIdCliente)
+            //holder.idCliente = view.findViewById(R.id.textViewIdCliente)
             holder.nombre = view.findViewById(R.id.textViewNombreCliente)
             holder.apellido = view.findViewById(R.id.textViewApellidoCliente)
             holder.botonEliminar = view.findViewById(R.id.btnEliminar)
@@ -47,7 +47,7 @@ class ClienteAdapter(
         val cliente = dataSource[position]
 
         // Asignar valores a los TextView
-        holder.idCliente.text = cliente.idCliente.toString()
+        //holder.idCliente.text = cliente.idCliente.toString()
         holder.nombre.text = cliente.nombre
         holder.apellido.text = cliente.apellido
 

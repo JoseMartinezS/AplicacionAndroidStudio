@@ -55,6 +55,8 @@ class InsertarCliente : AppCompatActivity() {
     }
 
     private fun insertarNuevoCliente(nombre: String, apellido: String, direccion: String, telefono: String, correo: String) {
+        buttonInsertar.isEnabled = false
+
         apiService.agregarCliente(nombre, apellido, direccion, telefono, correo)
             .enqueue(object : Callback<Void> {
                 override fun onResponse(call: Call<Void>, response: Response<Void>) {
@@ -63,11 +65,15 @@ class InsertarCliente : AppCompatActivity() {
                     } else {
                         val errorBody = response.errorBody()?.string()
                         mostrarMensaje("Error al agregar cliente: ${response.code()} - ${errorBody}")
+                        buttonInsertar.isEnabled = true
+
                     }
                 }
 
                 override fun onFailure(call: Call<Void>, t: Throwable) {
                     mostrarMensaje("Error al conectar con el servidor: ${t.message}")
+                    buttonInsertar.isEnabled = true
+
                 }
             })
     }

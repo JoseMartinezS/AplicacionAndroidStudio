@@ -46,6 +46,8 @@ class InsertarPedido : AppCompatActivity() {
     }
 
     private fun insertarNuevoPedido(fecha: String, direccion: String) {
+        buttonInsertar.isEnabled = false
+
         apiService.agregarPedido(fecha, direccion).enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if (response.isSuccessful) {
@@ -53,11 +55,15 @@ class InsertarPedido : AppCompatActivity() {
                 } else {
                     val errorBody = response.errorBody()?.string()
                     mostrarMensaje("Error al agregar pedido: ${response.code()} - ${errorBody}")
+                    buttonInsertar.isEnabled = true
+
                 }
             }
 
             override fun onFailure(call: Call<Void>, t: Throwable) {
                 mostrarMensaje("Error al conectar con el servidor: ${t.message}")
+                buttonInsertar.isEnabled = true
+
             }
         })
     }

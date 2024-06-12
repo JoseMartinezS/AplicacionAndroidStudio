@@ -17,7 +17,7 @@ class ProductoAdapter(
 ) : ArrayAdapter<Producto>(context, R.layout.item_producto, dataSource) {
 
     private class ViewHolder {
-        lateinit var idProducto: TextView
+        //lateinit var idProducto: TextView
         lateinit var nombre: TextView
         lateinit var descripcion: TextView
         lateinit var botonEliminar: ImageButton
@@ -31,7 +31,7 @@ class ProductoAdapter(
         if (convertView == null) {
             view = LayoutInflater.from(context).inflate(R.layout.item_producto, parent, false)
             holder = ViewHolder()
-            holder.idProducto = view.findViewById(R.id.textViewIdProducto)
+            //holder.idProducto = view.findViewById(R.id.textViewIdProducto)
             holder.nombre = view.findViewById(R.id.textViewNombreProducto)
             holder.descripcion = view.findViewById(R.id.textViewDescripcion)
             holder.botonEliminar = view.findViewById(R.id.btnEliminar)
@@ -44,7 +44,7 @@ class ProductoAdapter(
 
         val producto = dataSource[position]
 
-        holder.idProducto.text = producto.idProducto.toString()
+        //holder.idProducto.text = producto.idProducto.toString()
         holder.nombre.text = producto.nombre
         holder.descripcion.text = producto.descripcion
 

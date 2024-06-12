@@ -52,6 +52,8 @@ class InsertarProducto : AppCompatActivity() {
     }
 
     private fun insertarNuevoProducto(nombre: String, descripcion: String, precio: Double, stock: Int) {
+        buttonInsertar.isEnabled = false
+
         apiService.agregarProducto(nombre, descripcion, precio, stock)
             .enqueue(object : Callback<Void> {
                 override fun onResponse(call: Call<Void>, response: Response<Void>) {
@@ -60,11 +62,15 @@ class InsertarProducto : AppCompatActivity() {
                     } else {
                         val errorBody = response.errorBody()?.string()
                         mostrarMensaje("Error al agregar producto: ${response.code()} - ${errorBody}")
+                        buttonInsertar.isEnabled = true
+
                     }
                 }
 
                 override fun onFailure(call: Call<Void>, t: Throwable) {
                     mostrarMensaje("Error al conectar con el servidor: ${t.message}")
+                    buttonInsertar.isEnabled = true
+
                 }
             })
     }

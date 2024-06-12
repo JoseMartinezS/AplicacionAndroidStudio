@@ -18,14 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="63dp">
 
-        <TextView
-            android:id="@+id/textViewIdDetallePedidoo"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="ID DetallePed"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+
 
         <TextView
             android:id="@+id/textViewCantidadd"
@@ -41,7 +34,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="PrecioUni"
+            android:text="PrecioUnitario"
             android:textColor="#FFFFFF"
             android:textSize="16sp" />
 

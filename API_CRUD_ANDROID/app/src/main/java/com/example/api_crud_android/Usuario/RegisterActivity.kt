@@ -62,6 +62,8 @@ class RegisterActivity : AppCompatActivity() {
                     val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
                     startActivity(intent)
                     finish()
+                } else if (response.code() == 409) {
+                    mostrarMensaje("El correo ya está en uso")
                 } else {
                     val errorBody = response.errorBody()?.string()
                     mostrarMensaje("Error al registrar usuario: ${response.code()} - $errorBody")

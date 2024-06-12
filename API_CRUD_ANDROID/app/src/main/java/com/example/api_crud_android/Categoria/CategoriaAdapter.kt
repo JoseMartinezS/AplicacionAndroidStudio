@@ -18,7 +18,7 @@ class CategoriaAdapter(
 ) : ArrayAdapter<Categoria>(context, R.layout.item_categoria, dataSource) {
 
     private class ViewHolder {
-        lateinit var idCategoria: TextView
+        //lateinit var idCategoria: TextView
         lateinit var nombre: TextView
         lateinit var botonEliminar: ImageButton
         lateinit var botonEditar: ImageButton
@@ -31,7 +31,7 @@ class CategoriaAdapter(
         if (convertView == null) {
             view = LayoutInflater.from(context).inflate(R.layout.item_categoria, parent, false)
             holder = ViewHolder()
-            holder.idCategoria = view.findViewById(R.id.textViewIdCategoria)
+            //holder.idCategoria = view.findViewById(R.id.textViewIdCategoria)
             holder.nombre = view.findViewById(R.id.textViewNombreCategoria)
             holder.botonEliminar = view.findViewById(R.id.btnEliminar)
             holder.botonEditar = view.findViewById(R.id.botonEditarCategoria)
@@ -45,7 +45,7 @@ class CategoriaAdapter(
         val categoria = dataSource[position]
 
         // Asignar valores a los TextView
-        holder.idCategoria.text = categoria.idCategoria.toString()
+        //holder.idCategoria.text = categoria.idCategoria.toString()
         holder.nombre.text = categoria.nombre
 
         // Configurar el botón eliminar
