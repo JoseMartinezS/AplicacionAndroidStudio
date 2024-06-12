@@ -39,6 +39,13 @@ namespace API_CRUD.Controllers
         [HttpPost]
         public async Task<ActionResult<Usuario>> AgregarUsuario(string nombreUsuario, string contrasena, string correo, string rol)
         {
+            // Verificar si el correo ya existe
+            var usuarioExistente = await _context.Usuario.FirstOrDefaultAsync(u => u.correo == correo);
+            if (usuarioExistente != null)
+            {
+                return Conflict("El correo ya está en uso.");
+            }
+
             var nuevoUsuario = new Usuario
             {
                 nombreUsuario = nombreUsuario,

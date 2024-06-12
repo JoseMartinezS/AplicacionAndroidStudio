@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Deidad\\Downloads\\Android Riojas\\API CRUD\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7156C62B-ABB1-44D2-897F-8DE295CF3EE7}|API CRUD\\API CRUD.csproj|c:\\users\\deidad\\downloads\\android riojas\\api crud\\api crud\\controllers\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7156C62B-ABB1-44D2-897F-8DE295CF3EE7}|API CRUD\\API CRUD.csproj|solutionrelative:api crud\\controllers\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7156C62B-ABB1-44D2-897F-8DE295CF3EE7}|API CRUD\\API CRUD.csproj|c:\\users\\deidad\\downloads\\android riojas\\api crud\\api crud\\controllers\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7156C62B-ABB1-44D2-897F-8DE295CF3EE7}|API CRUD\\API CRUD.csproj|solutionrelative:api crud\\controllers\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7156C62B-ABB1-44D2-897F-8DE295CF3EE7}|API CRUD\\API CRUD.csproj|c:\\users\\deidad\\downloads\\android riojas\\api crud\\api crud\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{7156C62B-ABB1-44D2-897F-8DE295CF3EE7}|API CRUD\\API CRUD.csproj|solutionrelative:api crud\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7156C62B-ABB1-44D2-897F-8DE295CF3EE7}|API CRUD\\API CRUD.csproj|c:\\users\\deidad\\downloads\\android riojas\\api crud\\api crud\\controllers\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7156C62B-ABB1-44D2-897F-8DE295CF3EE7}|API CRUD\\API CRUD.csproj|solutionrelative:api crud\\controllers\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7156C62B-ABB1-44D2-897F-8DE295CF3EE7}|API CRUD\\API CRUD.csproj|c:\\users\\deidad\\downloads\\android riojas\\api crud\\api crud\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,23 +70,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\Deidad\\Downloads\\Android Riojas\\API CRUD\\API CRUD\\Controllers\\Usuario.cs",
               "RelativeDocumentMoniker": "API CRUD\\Controllers\\Usuario.cs",
               "ToolTip": "C:\\Users\\Deidad\\Downloads\\Android Riojas\\API CRUD\\API CRUD\\Controllers\\Usuario.cs",
               "RelativeToolTip": "API CRUD\\Controllers\\Usuario.cs",
-              "ViewState": "AQIAAHEAAAAAAAAAAAAkwJcAAAAAAAAA",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAAwC0AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-18T00:32:20.324Z"
+              "WhenOpened": "2024-05-18T00:32:20.324Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DataContext.cs",
               "DocumentMoniker": "C:\\Users\\Deidad\\Downloads\\Android Riojas\\API CRUD\\API CRUD\\DataContext.cs",
               "RelativeDocumentMoniker": "API CRUD\\DataContext.cs",
@@ -170,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Deidad\\Downloads\\Android Riojas\\API CRUD\\API CRUD\\appsettings.json",
               "RelativeDocumentMoniker": "API CRUD\\appsettings.json",
@@ -182,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Categoria.cs",
               "DocumentMoniker": "C:\\Users\\Deidad\\Downloads\\Android Riojas\\API CRUD\\API CRUD\\Categoria.cs",
               "RelativeDocumentMoniker": "API CRUD\\Categoria.cs",
@@ -194,13 +199,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Categoria.cs",
               "DocumentMoniker": "C:\\Users\\Deidad\\Downloads\\Android Riojas\\API CRUD\\API CRUD\\Controllers\\Categoria.cs",
               "RelativeDocumentMoniker": "API CRUD\\Controllers\\Categoria.cs",
               "ToolTip": "C:\\Users\\Deidad\\Downloads\\Android Riojas\\API CRUD\\API CRUD\\Controllers\\Categoria.cs",
               "RelativeToolTip": "API CRUD\\Controllers\\Categoria.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAG8AAAAmAAAA",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAcwA8AAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T00:49:15.429Z",
               "EditorCaption": ""
